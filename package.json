@@ -1,0 +1,16 @@
+{
+  "name": "cg-music-production-website",
+  "version": "1.0.0",
+  "description": "Premium website for CG Music Production",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y lite-server"
+  },
+  "keywords": [
+    "music",
+    "production",
+    "chhattisgarh"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}

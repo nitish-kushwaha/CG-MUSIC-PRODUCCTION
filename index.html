@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CG Music Production | Premium Studio Console Experience (छत्तीसगढ़)</title>
+  <meta name="description" content="Chhattisgarh Music Production is a full-service recording studio in Chhattisgarh. We offer Audio Recording, Mixing & Mastering, Beats Production, and Video Editing.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- A. CRT SCANLINES OVERLAY (FOR ULTRA PREMIUM CINEMATIC VIBE) -->
+  <div class="scanlines"></div>
+
+  <!-- B. SYSTEM BOOT INTRO OVERLAY -->
+  <div class="boot-overlay" id="boot-overlay">
+    <div class="crt-terminal">
+      <div id="terminal-text" class="crt-text"></div>
+      <!-- Wave Animation during Boot -->
+      <div class="boot-wave-container">
+        <span class="boot-wave"></span>
+        <span class="boot-wave"></span>
+        <span class="boot-wave"></span>
+        <span class="boot-wave"></span>
+        <span class="boot-wave"></span>
+        <span class="boot-wave"></span>
+        <span class="boot-wave"></span>
+        <span class="boot-wave"></span>
+      </div>
+    </div>
+    <div class="power-btn-container">
+      <button class="power-btn" id="power-btn" aria-label="Power System On">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 10h-2V6h2v6zm-1 8c-4.41 0-8-3.59-8-8 0-1.85.64-3.55 1.7-4.9l1.43 1.43C5.41 9.59 5 10.74 5 12c0 3.86 3.14 7 7 7s7-3.14 7-7c0-1.26-.41-2.41-1.13-3.47l1.43-1.43c1.06 1.35 1.7 3.05 1.7 4.9 0 4.41-3.59 8-8 8z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="power-label">System Power</div>
+  </div>
+
+  <!-- C. BEAT-REACTIVE BACKGROUND PARTICLE CANVAS -->
+  <canvas id="bg-particle-canvas"></canvas>
+
+  <!-- 1. HEADER / NAVIGATION BAR -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo-wrapper" id="nav-logo">
+        <div class="logo-icon">
+          <!-- Custom sound wave + mic SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 2c1.66 0 3 1.34 3 3v7c0 1.66-1.34 3-3 3s-3-1.34-3-3V5c0-1.66 1.34-3 3-3zm7 10h-1.9c-.43 2.76-2.8 4.9-5.1 4.9s-4.67-2.14-5.1-4.9H5c.5 3.44 3.42 6.1 6.9 6.82V22h2.2v-3.18c3.48-.72 6.4-3.38 6.9-6.82z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">CG MUSIC</span>
+          <span class="logo-subtitle">छत्तीसगढ़ म्यूजिक प्रोडक्शन</span>
+        </div>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Studio</a></li>
+        <li><a href="#portfolio">Our Releases</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="#contact" class="btn btn-primary btn-nav">Book Session</a>
+    </div>
+  </header>
+
+  <!-- 2. CINEMATIC HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
+          Premium Recording Studio
+        </div>
+        <h1 class="hero-title">CG MUSIC<br>PRODUCTION</h1>
+        <div class="hero-slogan hindi-text">।। हमारे संगीत में छत्तीसगढ़ की पहचान ।।</div>
+        <p class="hero-description">
+          Chhattisgarh's leading full-service music house. We turn your voice and musical concept into a finished, broadcast-ready song. Step in for audio recording, mastering, songwriting, and full-scale music production under one roof.
+        </p>
+        
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Book a Session</a>
+          <a href="#portfolio" class="btn btn-secondary">Listen to Our Work</a>
+        </div>
+
+        <!-- Animated Counters -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-target="150" data-suffix="+">0</span>
+            <span class="stat-label">Tracks Produced</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="80" data-suffix="+">0</span>
+            <span class="stat-label">Artists Collaborated</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5" data-suffix="+ Years">0</span>
+            <span class="stat-label">Years of Craft</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live CSS Visualizer Panel -->
+      <div class="hero-visualizer">
+        <div class="soundwave-container hero-visuals">
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT & STUDIO OVERVIEW SECTION -->
+  <section class="section bg-gradient" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <img src="assets/studio_booth.jpg" alt="Vocal booth at CG Music Production" loading="lazy">
+      </div>
+      <div class="about-content">
+        <span class="section-badge">The Studio Space</span>
+        <h2 class="section-title">A Space Built For Creativity</h2>
+        <div class="about-tagline hindi-text">छत्तीसगढ़ की संस्कृति, छत्तीसगढ़ की आवाज, छत्तीसगढ़ के संग</div>
+        <p class="about-desc">
+          Our studio in Chhattisgarh is designed to help local and national artists feel at home while sounding their absolute best. We provide fully treated acoustics, state-of-the-art recording booths, and engineers who understand both traditional folk melodies and modern commercial sounds.
+        </p>
+        
+        <ul class="about-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Treated Vocal Booth
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            FL Studio & Ableton Suite
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Condenser Studio Microphones
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Pro Monitors & Latency-Free Audio
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICES GRID SECTION (WITH 3D perspektiv TILT) -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Offerings</span>
+        <h2 class="section-title">Professional Music Services</h2>
+        <p class="section-subtitle">Everything a singer or creator needs to go from a simple hum to a release-ready masterpiece.</p>
+      </div>
+
+      <div class="services-grid perspective-container">
+        <!-- Service 1: Audio Recording -->
+        <div class="service-card-wrapper">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.44 2.76 6.23 6 6.72V21h2v-3.28c3.24-.48 6-3.28 6-6.72h-1.7z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Audio Recording</h3>
+            <p class="service-desc">Professionally isolated recording booth equipped with top-tier condenser mics to capture every nuance of your vocals or instruments.</p>
+          </div>
+        </div>
+
+        <!-- Service 2: Music Production -->
+        <div class="service-card-wrapper">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Music Production</h3>
+            <p class="service-desc">Custom beat-making and arrangements. We create beats across CG Folk, Devotional Jasgeet, Bollywood, Rap, and Pop styles.</p>
+          </div>
+        </div>
+
+        <!-- Service 3: Mixing & Mastering -->
+        <div class="service-card-wrapper">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Mixing & Mastering</h3>
+            <p class="service-desc">Balanced dynamics, pristine high-ends, and robust low-ends. Get your tracks volume-matched and formatted for Spotify, YouTube, and Apple Music.</p>
+          </div>
+        </div>
+
+        <!-- Service 4: Voice Over -->
+        <div class="service-card-wrapper">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12v5c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-3v8h3c1.66 0 3-1.34 3-3v-5c0-5.52-4.48-10-10-10z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Voice Over</h3>
+            <p class="service-desc">Crystal clear voice recording for podcasts, audiobooks, local advertisements, commentary, documentary narration, and presentations.</p>
+          </div>
+        </div>
+
+        <!-- Service 5: Video Editing -->
+        <div class="service-card-wrapper">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c-.55 0-1-.45-1-1v-3.5l4 4v-11l-4 4z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Video Editing</h3>
+            <p class="service-desc">Professional cinematic editing, color grading, multi-camera sync, transitions, and lyrical formatting for music video final cuts.</p>
+          </div>
+        </div>
+
+        <!-- Service 6: Song Shoot -->
+        <div class="service-card-wrapper">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Song Shoot</h3>
+            <p class="service-desc">Complete music video production. We manage storyboard, location scouting, professional camera crews, directing, and editing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE HARDWARE GEAR & SYNTH PIANO SECTION -->
+  <section class="section bg-gradient" id="gear">
+    <div class="container studio-interactive-grid">
+      <div class="studio-interactive-info">
+        <span class="section-badge">Behind the Sounds</span>
+        <h2 class="section-title">Playable Synthesizer Console</h2>
+        <p class="about-desc">
+          Sound engineering is an art of precision. Use our interactive studio gear widget below to simulate how pre-amplifiers, dynamic compressors, and frequency controls shape the raw soundwave in our recording bay.
+        </p>
+        <p class="about-desc" style="margin-top: -15px;">
+          **Try the playable keyboard below!** Click on the keys to play synthetic musical tones. This is a mini octave built on Web Audio oscillators, reflecting our cutting-edge acoustic engineering.
+        </p>
+
+        <!-- Playable Piano Wrapper -->
+        <div class="piano-synth-section">
+          <div class="piano-wrapper">
+            <div class="piano-brand">CG-SYNTHESISER-OCTAVE</div>
+            <div class="piano-keys">
+              <div class="piano-key white" data-note="c4"><span class="key-label">Sa</span></div>
+              <div class="piano-key black" data-note="cs4"></div>
+              <div class="piano-key white" data-note="d4"><span class="key-label">Re</span></div>
+              <div class="piano-key black" data-note="ds4"></div>
+              <div class="piano-key white" data-note="e4"><span class="key-label">Ga</span></div>
+              <div class="piano-key white" data-note="f4"><span class="key-label">Ma</span></div>
+              <div class="piano-key black" data-note="fs4"></div>
+              <div class="piano-key white" data-note="g4"><span class="key-label">Pa</span></div>
+              <div class="piano-key black" data-note="gs4"></div>
+              <div class="piano-key white" data-note="a4"><span class="key-label">Dha</span></div>
+              <div class="piano-key black" data-note="as4"></div>
+              <div class="piano-key white" data-note="b4"><span class="key-label">Ni</span></div>
+              <div class="piano-key white" data-note="c5"><span class="key-label">Sa</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive Rack Controls Widget -->
+      <div class="rack-container">
+        <!-- Preamp Unit -->
+        <div class="rack-unit">
+          <div class="rack-unit-label">
+            <span>CG-PREAMP-101</span>
+            <span>GAIN CONTROL (CLICK KNOBS)</span>
+          </div>
+          <div class="rack-controls">
+            <div class="knob-control">
+              <div class="knob-outer" data-param="gain">
+                <span class="knob-marker"></span>
+              </div>
+              <span class="knob-label">Gain (Input)</span>
+            </div>
+            <div class="knob-control">
+              <div class="knob-outer" data-param="freq">
+                <span class="knob-marker"></span>
+              </div>
+              <span class="knob-label">Freq (Hz)</span>
+            </div>
+            <div class="knob-control">
+              <div class="knob-outer" data-param="comp">
+                <span class="knob-marker"></span>
+              </div>
+              <span class="knob-label">Comp (Threshold)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Waveform Preview Unit -->
+        <div class="rack-unit">
+          <div class="rack-unit-label">
+            <span>OUT WAVEFORM PREVIEW</span>
+            <span>MONITOR ACTIVE</span>
+          </div>
+          <div class="rack-wave-preview">
+            <svg viewBox="0 0 300 80">
+              <path id="hardware-wave-path" d="M 0,40 L 300,40" class="rack-wave-path"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. DYNAMIC MUSIC PLAYER SECTION (WITH RADIAL SPECTRUM) -->
+  <section class="section" id="player">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Audio Preview</span>
+        <h2 class="section-title">Listen to Our Production</h2>
+        <p class="section-subtitle">Click play to hear our Chhattisgarhi Folk & Pop synth-generated demonstration, and check track titles below.</p>
+      </div>
+
+      <div class="audio-player-container">
+        <div class="player-flex">
+          <!-- Left: Rotating Vinyl Record Area -->
+          <div class="player-disc-area">
+            <div class="disc-wrapper">
+              <!-- Radial visualizer canvas overlay -->
+              <canvas id="radial-visualizer-canvas"></canvas>
+              
+              <div class="disc-vinyl" id="player-disc">
+                <div class="disc-center"></div>
+              </div>
+            </div>
+            <div class="player-details">
+              <h4 class="player-details-title" id="player-title">Shadi Ke Season (CG Folk)</h4>
+              <p class="player-details-subtitle" id="player-subtitle">Sagar Yadav & Nileema</p>
+            </div>
+          </div>
+
+          <!-- Right: Controls & Track List -->
+          <div class="player-controls-area">
+            <ul class="track-list">
+              <li class="track-item active" data-track-key="cfolk" data-title="Shadi Ke Season (CG Folk)" data-subtitle="Sagar Yadav & Nileema">
+                <div class="track-meta">
+                  <span class="track-play-status-icon">▶</span>
+                  <span>1. Shadi Ke Season (शादी के सीजन)</span>
+                </div>
+                <span class="track-time">3:00</span>
+              </li>
+              <li class="track-item" data-track-key="cpop" data-title="Ka Jadu Dare Re (CG Pop)" data-subtitle="Monika Verma & Manish Patel">
+                <div class="track-meta">
+                  <span class="track-play-status-icon">▶</span>
+                  <span>2. Ka Jadu Dare Re (का जादू डारे रे)</span>
+                </div>
+                <span class="track-time">3:00</span>
+              </li>
+              <li class="track-item" data-track-key="clove" data-title="Maya Hoge 2 (Love Pop)" data-subtitle="Sagar Yadav & Anjali Verma">
+                <div class="track-meta">
+                  <span class="track-play-status-icon">▶</span>
+                  <span>3. Maya Hoge 2 (मया होगे 2)</span>
+                </div>
+                <span class="track-time">3:00</span>
+              </li>
+              <li class="track-item" data-track-key="cdev" data-title="Jai Shiv Shankar (Shiv Bhajan)" data-subtitle="Mahadev Song 2025">
+                <div class="track-meta">
+                  <span class="track-play-status-icon">▶</span>
+                  <span>4. Jai Shiv Shankar (जय शिव शंकर)</span>
+                </div>
+                <span class="track-time">3:00</span>
+              </li>
+            </ul>
+
+            <!-- Scrubber -->
+            <div class="player-scrubber">
+              <span class="player-time-current" id="current-time">0:00</span>
+              <input type="range" class="player-slider" id="player-progress" min="0" max="100" value="0">
+              <span class="player-time-duration">3:00</span>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="player-action-buttons">
+              <button class="player-btn" id="player-backward" aria-label="Previous track">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                </svg>
+              </button>
+              
+              <button class="player-btn player-btn-main" id="main-play-btn" aria-label="Play/Pause">
+                <span id="main-play-icon">
+                  <!-- Play Icon -->
+                  <svg width="28" height="28" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" fill="currentColor"/>
+                  </svg>
+                </span>
+              </button>
+
+              <button class="player-btn" id="player-forward" aria-label="Next track">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6 18l8.5-6L6 6zm9-12v12h2V6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PORTFOLIO VIDEOS GRID SECTION -->
+  <section class="section bg-gradient" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">YouTube Hits</span>
+        <h2 class="section-title">Real Songs We've Produced</h2>
+        <p class="section-subtitle">Click on any video below to watch and listen to real tracks produced by our team.</p>
+      </div>
+
+      <div class="portfolio-grid perspective-container">
+        <!-- Video 1 -->
+        <div class="portfolio-card-wrapper">
+          <div class="portfolio-card" data-video-id="Z3jvf4gGA7I">
+            <div class="portfolio-thumb-wrapper">
+              <img src="https://img.youtube.com/vi/Z3jvf4gGA7I/0.jpg" alt="Shadi Ke Season Thumbnail" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-play-btn">▶</div>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Shadi Ke Season | शादी के सीजन</h3>
+              <div class="portfolio-meta">
+                <span>Sagar Yadav & Nileema</span>
+                <span class="text-gold">142K+ Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="portfolio-card-wrapper">
+          <div class="portfolio-card" data-video-id="4QTc-xXEVko">
+            <div class="portfolio-thumb-wrapper">
+              <img src="https://img.youtube.com/vi/4QTc-xXEVko/0.jpg" alt="Ka Jadu Dare Re Thumbnail" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-play-btn">▶</div>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Ka Jadu Dare Re | का जादू डारे रे</h3>
+              <div class="portfolio-meta">
+                <span>M. Verma & M. Patel</span>
+                <span class="text-gold">21K+ Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="portfolio-card-wrapper">
+          <div class="portfolio-card" data-video-id="EIomfv4-5_c">
+            <div class="portfolio-thumb-wrapper">
+              <img src="https://img.youtube.com/vi/EIomfv4-5_c/0.jpg" alt="Maya Hoge 2 Thumbnail" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-play-btn">▶</div>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Maya Hoge 2 | मया होगे 2</h3>
+              <div class="portfolio-meta">
+                <span>Sagar Yadav & Anjali Verma</span>
+                <span class="text-gold">19K+ Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="portfolio-card-wrapper">
+          <div class="portfolio-card" data-video-id="U5OQMLNZReQ">
+            <div class="portfolio-thumb-wrapper">
+              <img src="https://img.youtube.com/vi/U5OQMLNZReQ/0.jpg" alt="Kaari Karonda Thumbnail" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-play-btn">▶</div>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Kaari Karonda | कारी करोंदा</h3>
+              <div class="portfolio-meta">
+                <span>Malti Nishad & Sohan Patel</span>
+                <span class="text-gold">7K+ Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="portfolio-card-wrapper">
+          <div class="portfolio-card" data-video-id="ooOMg_pRO3w">
+            <div class="portfolio-thumb-wrapper">
+              <img src="https://img.youtube.com/vi/ooOMg_pRO3w/0.jpg" alt="Jai Shiv Shankar Thumbnail" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-play-btn">▶</div>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Jai Shiv Shankar | Shiv Bhajan</h3>
+              <div class="portfolio-meta">
+                <span>Mahadev Song 2025</span>
+                <span class="text-gold">3.2K+ Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="portfolio-card-wrapper">
+          <div class="portfolio-card" data-video-id="BNNwYhtMtWk">
+            <div class="portfolio-thumb-wrapper">
+              <img src="https://img.youtube.com/vi/BNNwYhtMtWk/0.jpg" alt="Karni Dai Dada Ke Thumbnail" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-play-btn">▶</div>
+              </div>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Karni Dai Dada Ke | करनी दाई ददा के</h3>
+              <div class="portfolio-meta">
+                <span>Bhima Sinha | Jasgeet</span>
+                <span class="text-gold">1.1K+ Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="https://www.youtube.com/@chhattisgarhmusicproduction" target="_blank" rel="noopener" class="btn btn-secondary">▶ Watch More on YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. WHATSAPP QUOTE CALCULATOR SECTION -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Price Estimator</span>
+        <h2 class="section-title">Interactive Quote Calculator</h2>
+        <p class="section-subtitle">Select the production services you need, adjust hours, and instantly request a booking quote over WhatsApp.</p>
+      </div>
+
+      <div class="calculator-container">
+        <div class="calc-grid">
+          <!-- Left: Services Selection -->
+          <div class="calc-options">
+            <div>
+              <h3 class="calc-group-title">Select Services</h3>
+              <div class="calc-checkbox-grid">
+                <!-- Checkbox 1 -->
+                <div class="calc-checkbox-card">
+                  <input type="checkbox" id="chk-recording" data-service="recording" checked>
+                  <div class="calc-label-info">
+                    <span class="calc-label-title">Vocal Recording</span>
+                    <span class="calc-label-price">₹1,000 / Hour</span>
+                  </div>
+                </div>
+
+                <!-- Checkbox 2 -->
+                <div class="calc-checkbox-card">
+                  <input type="checkbox" id="chk-production" data-service="production" checked>
+                  <div class="calc-label-info">
+                    <span class="calc-label-title">Music Production</span>
+                    <span class="calc-label-price">₹8,000 / Song</span>
+                  </div>
+                </div>
+
+                <!-- Checkbox 3 -->
+                <div class="calc-checkbox-card">
+                  <input type="checkbox" id="chk-mixing" data-service="mixing" checked>
+                  <div class="calc-label-info">
+                    <span class="calc-label-title">Mixing & Mastering</span>
+                    <span class="calc-label-price">₹3,500 / Track</span>
+                  </div>
+                </div>
+
+                <!-- Checkbox 4 -->
+                <div class="calc-checkbox-card">
+                  <input type="checkbox" id="chk-songwriting" data-service="songwriting">
+                  <div class="calc-label-info">
+                    <span class="calc-label-title">Songwriting Support</span>
+                    <span class="calc-label-price">₹3,000 / Song</span>
+                  </div>
+                </div>
+
+                <!-- Checkbox 5 -->
+                <div class="calc-checkbox-card">
+                  <input type="checkbox" id="chk-shoot" data-service="shoot">
+                  <div class="calc-label-info">
+                    <span class="calc-label-title">Music Song Shoot</span>
+                    <span class="calc-label-price">₹15,000 / Day Shoot</span>
+                  </div>
+                </div>
+
+                <!-- Checkbox 6 -->
+                <div class="calc-checkbox-card">
+                  <input type="checkbox" id="chk-editing" data-service="editing">
+                  <div class="calc-label-info">
+                    <span class="calc-label-title">Video Editing</span>
+                    <span class="calc-label-price">₹4,000 / Video</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hours Slider -->
+            <div class="calc-slider-card">
+              <div class="calc-slider-header">
+                <span>Vocal Recording Hours</span>
+                <span id="recording-hours-val" class="text-gold">3 Hours</span>
+              </div>
+              <input type="range" class="fader-input" id="slider-recording" min="1" max="24" value="3">
+            </div>
+          </div>
+
+          <!-- Right: Summary Dashboard -->
+          <div class="calc-summary">
+            <div class="calc-summary-panel">
+              <div class="calc-summary-header">
+                <h3>Estimated Package</h3>
+                <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Summary of chosen services</p>
+                <div class="calc-price-display" id="calc-total-price">₹14,500</div>
+              </div>
+
+              <ul class="calc-breakdown" id="calc-breakdown-list">
+                <!-- Javascript will render summary here -->
+              </ul>
+
+              <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="whatsapp-calc-btn" style="width: 100%;">
+                <!-- WhatsApp SVG -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.32a8.098 8.098 0 0 1-1.24-4.28c0-4.48 3.64-8.12 8.12-8.12 2.17 0 4.21.85 5.75 2.39a8.067 8.067 0 0 1 2.37 5.73c.01 4.48-3.63 8.15-8.12 8.15zm4.47-6.11c-.24-.12-1.45-.71-1.67-.8-.23-.08-.39-.12-.55.12-.17.25-.65.81-.8 1-.15.17-.3.19-.54.07-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.37-.42.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.75-1.82-.2-.48-.4-.42-.55-.42-.14 0-.31-.02-.47-.02-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.02 2.6.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.45-.59 1.65-1.17.2-.58.2-1.07.14-1.17-.06-.1-.23-.16-.47-.28z"/>
+                </svg>
+                Book via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. TESTIMONIALS SECTION -->
+  <section class="section bg-gradient" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Client Love</span>
+        <h2 class="section-title">What Artists Say</h2>
+        <p class="section-subtitle">Read reviews from rising regional stars and independent singers who record with us.</p>
+      </div>
+
+      <div class="testimonial-track">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"CG Music Production handles everything from recording to release distributions. My jasgeet sounds crystal clear and hit 100k views on YouTube within weeks!"</p>
+          <div class="testimonial-author-wrapper">
+            <div class="testimonial-avatar">PS</div>
+            <div class="testimonial-author">
+              <div class="testimonial-author-name">Priya Sahu</div>
+              <div class="testimonial-author-role">Playback Singer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"As an independent rapper, finding a studio that understands modern beats and local accents is tough. The beats produced here are absolutely top notch."</p>
+          <div class="testimonial-author-wrapper">
+            <div class="testimonial-avatar">RV</div>
+            <div class="testimonial-author">
+              <div class="testimonial-author-name">Rohit Verma</div>
+              <div class="testimonial-author-role">Independent Artist</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"The vocal booth isolation is outstanding. I recorded my acoustic guitar tracks and the mixing engineer brought out details I didn't even know were there."</p>
+          <div class="testimonial-author-wrapper">
+            <div class="testimonial-avatar">AD</div>
+            <div class="testimonial-author">
+              <div class="testimonial-author-name">Ankita Dewangan</div>
+              <div class="testimonial-author-role">Singer-Songwriter</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CONTACT FORM & LOCATION MAP SECTION -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Book Your Recording Session</h2>
+        <p class="section-subtitle">Reach out to block your hours or ask questions about our custom beats and packages.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Contact info details -->
+        <div class="contact-info-cards">
+          <!-- Card 1: Studio Location -->
+          <div class="contact-info-card">
+            <div class="contact-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h4>Studio Location</h4>
+              <p>महुदा, पाटन, दुर्ग (छ.ग.)</p>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 2px;">Main Branch, Patan Durg</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Raipur Branch -->
+          <div class="contact-info-card">
+            <div class="contact-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h4>Raipur Branch</h4>
+              <p>Raipur, Chhattisgarh, India</p>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 2px;">Marketing Office</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Call Details -->
+          <div class="contact-info-card">
+            <div class="contact-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h4>Call or WhatsApp</h4>
+              <p>+91 8435437432 (Patan)</p>
+              <p>+91 79064 14250 (Raipur)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <form class="contact-form" id="studio-contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="frm-name">Your Name</label>
+              <input type="text" id="frm-name" class="form-input" placeholder="e.g. Sagar Yadav" required>
+            </div>
+            <div class="form-group">
+              <label for="frm-phone">Phone Number</label>
+              <input type="tel" id="frm-phone" class="form-input" placeholder="e.g. 9876543210" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="frm-email">Email Address (Optional)</label>
+            <input type="email" id="frm-email" class="form-input" placeholder="e.g. singer@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="frm-service">Service Needed</label>
+            <select id="frm-service" class="form-input" style="background-color: var(--color-bg-dark);" required>
+              <option value="">-- Choose a Service --</option>
+              <option value="recording">Vocal Recording (₹1000/hr)</option>
+              <option value="production">Music Production (₹8000/song)</option>
+              <option value="mixing">Mixing & Mastering (₹3500/track)</option>
+              <option value="shoot">Song Video Shoot (₹15000)</option>
+              <option value="all">Full Package (Complete Song)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="frm-message">Tell us about your song</label>
+            <textarea id="frm-message" class="form-input" rows="4" placeholder="Briefly describe your song style, language, budget or recording duration..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">
+            भेजें (Send Session Booking)
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. YOUTUBE MODAL POPUP IFRAME -->
+  <div class="modal-overlay" id="video-modal">
+    <div class="modal-content-container">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close video">&times;</button>
+      <iframe class="modal-iframe" id="modal-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- 12. FOOTER SECTION -->
+  <footer>
+    <div class="container footer-flex">
+      <a href="#" class="logo-wrapper">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2c1.66 0 3 1.34 3 3v7c0 1.66-1.34 3-3 3s-3-1.34-3-3V5c0-1.66 1.34-3 3-3z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">CG MUSIC</span>
+          <span class="logo-subtitle">छत्तीसगढ़ म्यूजिक प्रोडक्शन</span>
+        </div>
+      </a>
+
+      <div class="footer-socials">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/918435437432" class="footer-social-link" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.32a8.098 8.098 0 0 1-1.24-4.28c0-4.48 3.64-8.12 8.12-8.12 2.17 0 4.21.85 5.75 2.39a8.067 8.067 0 0 1 2.37 5.73c.01 4.48-3.63 8.15-8.12 8.15z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@chhattisgarhmusicproduction" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube Channel">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.388.511a3.003 3.003 0 0 0-2.11 2.107C0 8.021 0 12 0 12s0 3.979.502 5.837a3.003 3.003 0 0 0 2.11 2.107c1.883.511 9.388.511 9.388.511s7.505 0 9.388-.511a3.003 3.003 0 0 0 2.11-2.107c.502-1.858.502-5.837.502-5.837s0-3.979-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Chhattisgarh Music Production. <br>
+        This website is designed and developed by <a href="https://nitishkushwaha.in" target="_blank" class="text-gold" style="font-weight: 600;">nitishkushwaha.in</a>. <br>
+        All the rights reserved by <a href="https://nitishkushwaha.in" target="_blank" class="text-gold" style="font-weight: 600;">nitishkushwaha.in</a>.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Controller Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
