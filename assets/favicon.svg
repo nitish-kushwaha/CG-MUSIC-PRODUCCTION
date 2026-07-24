@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="46" fill="#0D0D11" stroke="#FFC80A" stroke-width="4"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#FFC80A" stroke-width="1" stroke-dasharray="2 2"/>
+  <g fill="#FFC80A">
+    <!-- Microphone -->
+    <path d="M50 25c5.5 0 10 4.5 10 10v18c0 5.5-4.5 10-10 10s-10-4.5-10-10v-18c0-5.5 4.5-10 10-10z"/>
+    <path d="M68 47c0 9.4-7.2 17.1-16.5 17.9v6.1h10.5v4H38v-4h10.5v-6.1C39.2 64.1 32 56.4 32 47h4c0 7.7 6.3 14 14 14s14-6.3 14-14h4z"/>
+  </g>
+</svg>
